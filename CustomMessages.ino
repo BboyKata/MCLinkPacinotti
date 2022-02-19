@@ -19,11 +19,33 @@ String splitString(String str, char sep, int index)
 
 
 void dataEvent(String command, String data) {
+  //arriverà nella variabile command una stringa con scritto "msg" e in data ci sarà "param1:param2"
+  //la sintassi del comando che invierò da MC sarà per esempio "R:11", ovvero ROSSO Riga 1 Colonna 1
+  //a seconda del colore R o B che arriva accendere il pin corretto
+  /*R11 = 13
+    B11 = 12
+    R12 = 11
+    B12 = 10
+    R13 = 9
+    B13 = 8
+    R21 = 7
+    B21 = 6
+    R22 = 5
+    B22 = 4
+    R23 = 3
+    B23 = 2
+    R31 = A0
+    B31 = A1
+    R32 = A2
+    B32 = A3
+    R33 = A4
+    B33 = A5 */
+
   String colore = splitString(data, ":", 0);
   String index = splitString(data, ":", 1);
   if (colore.equals("R")) {
     if (index.equals("11")) {
-
+      pinMode(13, HIGH);
     } else if (index.equals("12")) {
 
     } else if (index.equals("13")) {
@@ -62,6 +84,7 @@ void dataEvent(String command, String data) {
 
     }
   } else if (colore.equals("RESET")) {
+    //spengo tutti i led
     for (int i = 2; i < 14; i++) {
       digitalWrite(i, LOW);
     }
