@@ -47,41 +47,41 @@ void dataEvent(String command, String data) {
     if (index.equals("11")) {
       pinMode(13, HIGH);
     } else if (index.equals("12")) {
-
+      pinMode(11, HIGH);
     } else if (index.equals("13")) {
-
+      pinMode(9, HIGH);
     } else if (index.equals("21")) {
-
+      pinMode(7, HIGH);        
     } else if (index.equals("22")) {
-
+      pinMode(5, HIGH);
     } else if (index.equals("23")) {
-
+      pinMode(3, HIGH);
     } else if (index.equals("31")) {
-
+      pinMode(A0, HIGH);
     } else if (index.equals("32")) {
-
+      pinMode(A2, HIGH);
     } else if (index.equals("33")) {
-
+      pinMode(A4, HIGH);
     }
   } else if (colore.equals("B")) {
     if (index.equals("11")) {
-
+      pinMode(12, HIGH);
     } else if (index.equals("12")) {
-
+      pinMode(10, HIGH);
     } else if (index.equals("13")) {
-
+      pinMode(8, HIGH);
     } else if (index.equals("21")) {
-
+      pinMode(6, HIGH); 
     } else if (index.equals("22")) {
-
+      pinMode(4, HIGH);
     } else if (index.equals("23")) {
-
+      pinMode(2, HIGH);
     } else if (index.equals("31")) {
-
+      pinMode(A1, HIGH);
     } else if (index.equals("32")) {
-
+      pinMode(A3, HIGH);
     } else if (index.equals("33")) {
-
+      pinMode(A5, HIGH);
     }
   } else if (colore.equals("RESET")) {
     //spengo tutti i led
